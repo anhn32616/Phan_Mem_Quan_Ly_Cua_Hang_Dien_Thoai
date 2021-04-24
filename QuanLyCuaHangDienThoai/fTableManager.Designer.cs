@@ -1,4 +1,4 @@
-﻿namespace QuanLyCuaHangDienThoai.View
+﻿namespace QuanLyCuaHangDienThoai
 {
     partial class fTableManager
     {
@@ -126,28 +126,28 @@
             this.EditInformationToolStripMenuItem.Name = "EditInformationToolStripMenuItem";
             this.EditInformationToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.EditInformationToolStripMenuItem.Text = "Chỉnh Sửa Tài Khoản";
-            //this.EditInformationToolStripMenuItem.Click += new System.EventHandler(this.EditInformationToolStripMenuItem_Click);
+            this.EditInformationToolStripMenuItem.Click += new System.EventHandler(this.EditInformationToolStripMenuItem_Click);
             // 
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
             this.ExitToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.ExitToolStripMenuItem.Text = "Đăng Xuất";
-            //this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.adminToolStripMenuItem.Text = "Admin";
-            //this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
+            this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
             // hủyTìmKiếmToolStripMenuItem
             // 
             this.hủyTìmKiếmToolStripMenuItem.Name = "hủyTìmKiếmToolStripMenuItem";
             this.hủyTìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.hủyTìmKiếmToolStripMenuItem.Text = "Hủy Tìm Kiếm";
-            //this.hủyTìmKiếmToolStripMenuItem.Click += new System.EventHandler(this.hủyTìmKiếmToolStripMenuItem_Click);
+            this.hủyTìmKiếmToolStripMenuItem.Click += new System.EventHandler(this.hủyTìmKiếmToolStripMenuItem_Click);
             // 
             // chọnToolStripMenuItem
             // 
@@ -166,28 +166,28 @@
             this.tùyChọnToolStripMenuItem.Name = "tùyChọnToolStripMenuItem";
             this.tùyChọnToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.tùyChọnToolStripMenuItem.Text = "Tùy Chọn";
-            //this.tùyChọnToolStripMenuItem.Click += new System.EventHandler(this.tùyChọnToolStripMenuItem_Click);
+            this.tùyChọnToolStripMenuItem.Click += new System.EventHandler(this.tùyChọnToolStripMenuItem_Click);
             // 
             // chọnTấtCảToolStripMenuItem
             // 
             this.chọnTấtCảToolStripMenuItem.Name = "chọnTấtCảToolStripMenuItem";
             this.chọnTấtCảToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.chọnTấtCảToolStripMenuItem.Text = "Chọn Tất Cả";
-            //this.chọnTấtCảToolStripMenuItem.Click += new System.EventHandler(this.chọnTấtCảToolStripMenuItem_Click);
+            this.chọnTấtCảToolStripMenuItem.Click += new System.EventHandler(this.chọnTấtCảToolStripMenuItem_Click);
             // 
             // hủyChọnToolStripMenuItem
             // 
             this.hủyChọnToolStripMenuItem.Name = "hủyChọnToolStripMenuItem";
             this.hủyChọnToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.hủyChọnToolStripMenuItem.Text = "Hủy Chọn";
-            //this.hủyChọnToolStripMenuItem.Click += new System.EventHandler(this.hủyChọnToolStripMenuItem_Click);
+            this.hủyChọnToolStripMenuItem.Click += new System.EventHandler(this.hủyChọnToolStripMenuItem_Click);
             // 
             // thôngTinSảnPhẩmToolStripMenuItem
             // 
             this.thôngTinSảnPhẩmToolStripMenuItem.Name = "thôngTinSảnPhẩmToolStripMenuItem";
             this.thôngTinSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
             this.thôngTinSảnPhẩmToolStripMenuItem.Text = "Thông Tin Sản Phẩm";
-            //this.thôngTinSảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.thôngTinSảnPhẩmToolStripMenuItem_Click);
+            this.thôngTinSảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.thôngTinSảnPhẩmToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -239,7 +239,7 @@
             this.lvPhone.TabIndex = 0;
             this.lvPhone.UseCompatibleStateImageBehavior = false;
             this.lvPhone.View = System.Windows.Forms.View.Details;
-            //this.lvPhone.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvPhone_MouseDoubleClick);
+            this.lvPhone.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvPhone_MouseDoubleClick);
             // 
             // columnHeader1
             // 
@@ -318,7 +318,7 @@
             this.button11.TabIndex = 28;
             this.button11.Text = "Tìm Kiếm";
             this.button11.UseVisualStyleBackColor = true;
-            //.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // cbSapXep
             // 
@@ -334,7 +334,7 @@
             this.cbSapXep.Name = "cbSapXep";
             this.cbSapXep.Size = new System.Drawing.Size(119, 21);
             this.cbSapXep.TabIndex = 14;
-            //this.cbSapXep.SelectedIndexChanged += new System.EventHandler(this.cbSapXep_SelectedIndexChanged);
+            this.cbSapXep.SelectedIndexChanged += new System.EventHandler(this.cbSapXep_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -360,7 +360,7 @@
             this.cbView.Name = "cbView";
             this.cbView.Size = new System.Drawing.Size(56, 21);
             this.cbView.TabIndex = 12;
-            //this.cbView.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            this.cbView.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -390,7 +390,7 @@
             this.cbPhanKhuc.Name = "cbPhanKhuc";
             this.cbPhanKhuc.Size = new System.Drawing.Size(94, 21);
             this.cbPhanKhuc.TabIndex = 8;
-            //this.cbPhanKhuc.SelectedIndexChanged += new System.EventHandler(this.cbPhanKhuc_SelectedIndexChanged);
+            this.cbPhanKhuc.SelectedIndexChanged += new System.EventHandler(this.cbPhanKhuc_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -427,7 +427,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Hủy Đơn";
             this.button3.UseVisualStyleBackColor = true;
-            //this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel3
             // 
@@ -531,7 +531,7 @@
             this.btMuaPhuKien.TabIndex = 14;
             this.btMuaPhuKien.Text = "Xem Ưu Đãi";
             this.btMuaPhuKien.UseVisualStyleBackColor = true;
-            //this.btMuaPhuKien.Click += new System.EventHandler(this.btMuaPhuKien_Click);
+            this.btMuaPhuKien.Click += new System.EventHandler(this.btMuaPhuKien_Click);
             // 
             // btnCheckOldCustomer
             // 
@@ -544,7 +544,7 @@
             this.btnCheckOldCustomer.TabIndex = 12;
             this.btnCheckOldCustomer.Text = "Check";
             this.btnCheckOldCustomer.UseVisualStyleBackColor = true;
-            //this.btnCheckOldCustomer.Click += new System.EventHandler(this.btnCheckOldCustomer_Click);
+            this.btnCheckOldCustomer.Click += new System.EventHandler(this.btnCheckOldCustomer_Click);
             // 
             // textBox4
             // 
@@ -626,7 +626,7 @@
             this.cbOldCustomers.TabIndex = 3;
             this.cbOldCustomers.Text = "Khách Hàng Cũ";
             this.cbOldCustomers.UseVisualStyleBackColor = true;
-            //this.cbOldCustomers.CheckedChanged += new System.EventHandler(this.cbOldCustomers_CheckedChanged);
+            this.cbOldCustomers.CheckedChanged += new System.EventHandler(this.cbOldCustomers_CheckedChanged);
             // 
             // label7
             // 
@@ -691,7 +691,7 @@
             this.button6.TabIndex = 11;
             this.button6.Text = "Thanh Toán";
             this.button6.UseVisualStyleBackColor = true;
-            //this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // fTableManager
             // 
