@@ -64,6 +64,7 @@
             this.checkShowPass.TabIndex = 4;
             this.checkShowPass.Text = "Hiển thị mật khẩu";
             this.checkShowPass.UseVisualStyleBackColor = true;
+            this.checkShowPass.CheckedChanged += new System.EventHandler(this.checkShowPass_CheckedChanged);
             // 
             // btLogin
             // 
@@ -74,6 +75,7 @@
             this.btLogin.TabIndex = 3;
             this.btLogin.Text = "Đăng nhập";
             this.btLogin.UseVisualStyleBackColor = true;
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // panel3
             // 
@@ -145,6 +147,7 @@
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fLogin_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
