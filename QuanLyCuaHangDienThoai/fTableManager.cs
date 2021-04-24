@@ -451,6 +451,7 @@ namespace QuanLyCuaHangDienThoai
                     {
                         BillInfoDAO.Instance.ThemBillInfo(BillDAO.Instance.GetMaBillMoi(), phone.Phone.MaDT, phone.SoLuong);
                     }
+		    // Nếu không chọn phụ kiện nào
                     if (this.listPhuKienSelect != null)
                     {
                         foreach (PhuKien phukien in this.listPhuKienSelect)

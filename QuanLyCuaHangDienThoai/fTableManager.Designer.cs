@@ -624,6 +624,7 @@
             this.cbOldCustomers.Name = "cbOldCustomers";
             this.cbOldCustomers.Size = new System.Drawing.Size(116, 20);
             this.cbOldCustomers.TabIndex = 3;
+	    //edit
             this.cbOldCustomers.Text = "Khách Hàng Cũ";
             this.cbOldCustomers.UseVisualStyleBackColor = true;
             this.cbOldCustomers.CheckedChanged += new System.EventHandler(this.cbOldCustomers_CheckedChanged);
