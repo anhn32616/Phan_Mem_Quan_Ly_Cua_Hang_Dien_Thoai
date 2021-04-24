@@ -79,7 +79,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            //this.listView1.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.listView1_ItemChecked);
+            this.listView1.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.listView1_ItemChecked);
             // 
             // columnHeader1
             // 
@@ -131,7 +131,7 @@
             this.checkBox1.TabIndex = 16;
             this.checkBox1.Text = "Hiển Thị Danh Sách Gợi Ý";
             this.checkBox1.UseVisualStyleBackColor = true;
-            ///this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // btMua
             // 
@@ -141,7 +141,7 @@
             this.btMua.TabIndex = 4;
             this.btMua.Text = "Mua";
             this.btMua.UseVisualStyleBackColor = true;
-            //this.btMua.Click += new System.EventHandler(this.btMua_Click);
+            this.btMua.Click += new System.EventHandler(this.btMua_Click);
             // 
             // label3
             // 
@@ -202,7 +202,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "Hủy";
             this.button2.UseVisualStyleBackColor = true;
-            //this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -256,7 +256,7 @@
             this.listView2.TabIndex = 17;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
-            //this.listView2.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.listView2_ItemChecked);
+            this.listView2.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.listView2_ItemChecked);
             // 
             // columnHeader5
             // 
@@ -319,7 +319,7 @@
             0,
             0,
             0});
-            //this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label10
             // 
