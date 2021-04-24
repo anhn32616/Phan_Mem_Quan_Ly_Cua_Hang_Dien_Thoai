@@ -1,0 +1,562 @@
+1.     Thuật toán Bresenham
+#include<gl/glut.h>
+
+#include<math.h>
+
+ 
+
+ 
+
+void Bres_Line(int x1, int y1, int x2, int y2)
+
+{
+
+        glColor3f(0.0f, 0.0f, 1.0f);//Set the color, blue
+
+        glPointSize(3);//Rasterized point with a diameter of 3
+
+ 
+
+        int dx = abs(x2-x1);//Calculate |∆x|
+
+        int dy = abs(y2-y1);//Calculate |∆y|
+
+       if (dx == 0 && dy == 0)   return;
+
+       int flag = 0;
+
+       int temp;
+
+        if (dx <dy) //Transform the slope to 0≤|k|≤1
+
+       {
+
+              flag = 1;
+
+               temp = x1, x1 = y1, y1 = temp;//Exchange x1, y1
+
+               temp = x2, x2 = y2, y2 = temp;//Exchange x2, y2
+
+               temp = dx, dx = dy, dy = temp;//Exchange dx,dy
+
+               int tx = (x2-x1)> 0? 1: -1; //If the slope is 0≤k≤1, add 1, if the slope is -1≤k≤0, subtract 1
+
+              int ty = (y2 - y1) > 0 ? 1 : -1;
+
+               int curx = x1; //Current pixel x coordinate  
+
+               int cury = y1; //The current pixel y coordinate
+
+               //Draw the starting point
+
+              glBegin(GL_POINTS);
+
+              glVertex2i(x1, x2);
+
+              glEnd();
+
+               int d = 2 * dy-dx; //initial value of d
+
+              while (curx != x2)
+
+               {//Iteration formula
+
+                     if (d < 0)
+
+                           d += 2 * dy;
+
+                     else
+
+                     {
+
+                           cury += ty;
+
+                           d += 2 * (dy - dx);
+
+                     }
+
+                      if (flag)//If slope change has occurred
+
+                     {
+
+                           glBegin(GL_POINTS);
+
+                           glVertex2i(cury, curx);
+
+                           glEnd();
+
+                     }
+
+                     else
+
+                     {
+
+                           glBegin(GL_POINTS);
+
+                           glVertex2i(curx, cury);
+
+                           glEnd();
+
+                     }
+
+                      curx += tx;//The x coordinate of the next pixel
+
+              }
+
+       }
+
+}
+
+ 
+
+       void myDisplay()
+
+       {
+
+               glClearColor(1.0, 1.0, 1.0, 1.0);//Clear color, white
+
+               glClear(GL_COLOR_BUFFER_BIT);//Eliminate the buffer, use the above clear color to eliminate
+
+ 
+
+ 
+
+              //Bres_Line(0, 0, 200, 200);
+
+              //Bres_Line(200, 200, 0, 0);
+
+              Bres_Line(0, 200, 100, 100);
+
+ 
+
+               glFlush();//Forced refresh
+
+       }
+
+ 
+
+       void Reshape(int w, int h)
+
+       {
+
+               glViewport(0, 0, (GLsizei)w, (GLsizei)h); //Define the viewport size
+
+              glMatrixMode(GL_PROJECTION);
+
+              glLoadIdentity();
+
+               gluOrtho2D(0.0, (GLdouble)w, 0.0, (GLdouble)h);//Make the coordinates of the lower left corner be (0, 0) and the coordinates of the upper right corner be (w, h)
+
+       }
+
+ 
+
+       void main(int argc, char* argv[])
+
+       {
+
+               glutInit(&argc, argv);//Initialize GLUT
+
+               glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE);//Display mode
+
+               glutInitWindowPosition(100, 100);//Window position, the coordinates of the upper left corner of the window on the screen
+
+               glutInitWindowSize(400, 400);//Window size
+
+               glutCreateWindow("Bresenham drawing method");//Create a window, the parameter is the title of the window
+
+               glutDisplayFunc(myDisplay);//Tell GLUT which function is responsible for drawing, that is, register a drawing function myDisplay
+
+               glutReshapeFunc(Reshape); //When the window changes, what function is used to redraw
+
+               glutMainLoop();//Handle the never-ending loop monitoring
+
+       }
+
+ 
+
+2.    Thuật toán DDA
+#include<gl/glut.h>
+
+#include<math.h>
+
+ 
+
+ 
+
+void LineDDA(int x1, int y1, int x2, int y2)
+
+{
+
+        // Find Δm = max(|Δx|, |Δy|)
+
+       int dm = 0;
+
+        if (abs(x2-x1) >= abs(y2-y1)) //abs is a function for absolute value
+
+               dm = abs(x2-x1); //x is the length direction
+
+       else
+
+               dm = abs(y2-y1); //y is the length direction
+
+ 
+
+        //Find ∆𝒙⁄∆𝒎, and (∆𝒚)⁄∆𝒎, the length direction will be equal to 1
+
+       float dx = (float)(x2 - x1) / dm;
+
+       float dy = (float)(y2 - y1) / dm;
+
+ 
+
+        // Round the current coordinates
+
+       float x = x1 + 0.5;
+
+       float y = y1 + 0.5;
+
+ 
+
+        // Draw points in a loop, the x direction is increased to ∆𝒙⁄∆𝒎 and the y direction is increased to (∆𝒚)⁄∆𝒎
+
+        glColor3f(0.0f, 0.0f, 1.0f);//blue
+
+       glPointSize(5);
+
+       for (int i = 0; i < dm; i++)
+
+       {
+
+              glBegin(GL_POINTS);
+
+              glVertex2i((int)x, (int)y);
+
+              glEnd();
+
+              x += dx;
+
+              y += dy;
+
+       }
+
+}
+
+ 
+
+void myDisplay()
+
+{
+
+        glClearColor(1.0, 1.0, 1.0, 1.0);//Clear color, white
+
+        glClear(GL_COLOR_BUFFER_BIT);//Eliminate the buffer, use the above clear color to eliminate
+
+ 
+
+        glColor3f(1.0f, 0.0f, 0.0f);//Set the color, red
+
+       glLineWidth(5);
+
+       glBegin(GL_LINES);
+
+       glVertex3f(200.0f, 200.0f, 0.0f);
+
+       glVertex3f(400.0f, 400.0f, 0.0f);
+
+       glEnd();
+
+ 
+
+       //LineDDA(0, 0, 200, 200);
+
+       //LineDDA(200, 200, 0, 0);
+
+       LineDDA(0, 200, 100, 100);
+
+ 
+
+        glFlush();//Forced refresh
+
+}
+
+ 
+
+void Reshape(int w, int h)
+
+{
+
+        glViewport(0, 0, (GLsizei)w, (GLsizei)h); //Define the viewport size
+
+       glMatrixMode(GL_PROJECTION);
+
+       glLoadIdentity();
+
+       gluOrtho2D(0.0, (GLdouble)w, 0.0, (GLdouble)h);//Make the coordinates of the lower left corner be (0, 0) and the coordinates of the upper right corner be (w, h)
+
+}
+
+ 
+
+void main(int argc, char* argv[])
+
+{
+
+        glutInit(&argc, argv);//Initialize GLUT
+
+        glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE);//Display mode
+
+        glutInitWindowPosition(100, 100);//Window position, the coordinates of the upper left corner of the window on the screen
+
+        glutInitWindowSize(400, 400);//Window size
+
+        glutCreateWindow("LineDDA");//Create a window, the parameter is the title of the window
+
+        glutDisplayFunc(myDisplay);//Tell GLUT which function is responsible for drawing, that is, register a drawing function myDisplay
+
+        glutReshapeFunc(Reshape); //When the window changes, what function is used to redraw
+
+        glutMainLoop();//Handle the never-ending loop monitoring
+
+}
+
+ 
+
+3.    Thuật toán Mid-point drawing method
+#include<gl/glut.h>
+
+#include<math.h>
+
+ 
+
+ 
+
+void MidPLine(int x0, int y0, int x1, int y1)
+
+{
+
+         glColor3f(0.0f, 0.0f, 1.0f);//Set the color, blue
+
+         glPointSize(3);//Rasterized point with a diameter of 3
+
+ 
+
+    int a, b, d, x, y, temp, tag = 0;
+
+         if (abs(x1-x0) <abs(y1-y0)) //If the absolute value of the slope is greater than 1, swap the coordinates x and y
+
+    {
+
+        temp = x0, x0 = y0, y0 = temp;
+
+        temp = x1, x1 = y1, y1 = temp;
+
+        tag = 1;
+
+    }
+
+         if (x0> x1)//guarantee x0<x1
+
+    {
+
+        temp = x0, x0 = x1, x1 = temp;
+
+        temp = y0, y0 = y1, y1 = temp;
+
+    }
+
+         a = y0-y1;//The discriminant a
+
+         b = x1-x0; // discriminant b
+
+         d = a + b / 2;//The initial value of the discriminant
+
+         if (y0 <y1)//The slope is positive
+
+    {
+
+        x = x0; y = y0;
+
+                 glBegin(GL_POINTS);//Draw the starting point
+
+        glVertex2i(x, y);
+
+        glEnd();
+
+        while (x < x1)
+
+        {
+
+                         if (d <0) // Discriminant <0, take point P2, the increment is a+b
+
+            {
+
+                x++; y++; d = d + a + b;
+
+            }
+
+                         else// Discriminant >=0, take point P1, increment is a
+
+            {
+
+                x++; d += a;
+
+            }
+
+                         if (tag)//The slope is greater than 1
+
+            {
+
+                glBegin(GL_POINTS);
+
+                glVertex2i(y, x);
+
+                glEnd();
+
+            }
+
+            else
+
+            {
+
+                glBegin(GL_POINTS);
+
+                glVertex2i(x, y);
+
+                glEnd();
+
+            }
+
+        }  /* while */
+
+    }
+
+         else//The slope is negative (y0>=y1)
+
+    {
+
+        x = x1;
+
+        y = y1;
+
+                 glBegin(GL_POINTS);//Draw the starting point
+
+        glVertex2i(x, y);
+
+        glEnd();
+
+        while (x > x0)
+
+        {
+
+                         if (d <0)// Discriminant <0, the increment is -a+b
+
+            {
+
+                x--; y++; d = d - a + b;
+
+            }
+
+                         else// Discriminant >=0, the increment is -a
+
+            {
+
+                x--; d -= a;
+
+            }
+
+                         if (tag)//The slope is greater than 1
+
+            {
+
+                glBegin(GL_POINTS);
+
+                glVertex2i(y, x);
+
+                glEnd();
+
+            }
+
+            else
+
+            {
+
+                glBegin(GL_POINTS);
+
+                glVertex2i(x, y);
+
+                glEnd();
+
+            }
+
+        }  /* while */
+
+    }
+
+}
+
+void myDisplay()
+
+{
+
+         glClearColor(1.0, 1.0, 1.0, 1.0);//Clear color, white
+
+         glClear(GL_COLOR_BUFFER_BIT);//Eliminate the buffer, use the above clear color to eliminate
+
+ 
+
+ 
+
+    //MidPLine(0, 0, 200, 200);
+
+    //MidPLine(200, 200, 0, 0);
+
+    //MidPLine(0, 200, 100, 100);
+
+    MidPLine(200, 200, 400, 0);
+
+ 
+
+         glFlush();//Forced refresh
+
+}
+
+ 
+
+void Reshape(int w, int h)
+
+{
+
+         glViewport(0, 0, (GLsizei)w, (GLsizei)h); //Define the viewport size
+
+    glMatrixMode(GL_PROJECTION);
+
+    glLoadIdentity();
+
+         gluOrtho2D(0.0, (GLdouble)w, 0.0, (GLdouble)h);//Make the coordinates of the lower left corner be (0, 0) and the coordinates of the upper right corner be (w, h)
+
+}
+
+ 
+
+void main(int argc, char* argv[])
+
+{
+
+         glutInit(&argc, argv);//Initialize GLUT
+
+         glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE);//Display mode
+
+         glutInitWindowPosition(100, 100);//Window position, the coordinates of the upper left corner of the window on the screen
+
+         glutInitWindowSize(400, 400);//Window size
+
+         glutCreateWindow("Midpoint drawing method");//Create window, the parameter is the title of the window
+
+         glutDisplayFunc(myDisplay);//Tell GLUT which function is responsible for drawing, that is, register a drawing function myDisplay
+
+         glutReshapeFunc(Reshape); //When the window changes, what function is used to redraw
+
+         glutMainLoop();//Handle the never-ending loop monitoring
+
+}
