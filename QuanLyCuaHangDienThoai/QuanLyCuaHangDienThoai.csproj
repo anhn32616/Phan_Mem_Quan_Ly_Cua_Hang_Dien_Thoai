@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{039C8598-DF94-437D-B68D-ADCAFB689D08}</ProjectGuid>
+    <ProjectGuid>{15D7DF81-46D0-4506-819F-9CEFF2DBFD99}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>QuanLyCuaHangDienThoai</RootNamespace>
     <AssemblyName>QuanLyCuaHangDienThoai</AssemblyName>
@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,8 +48,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillInfoDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\PhoneDAO.cs" />
+    <Compile Include="DAO\PhuKienDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\Phone.cs" />
+    <Compile Include="DTO\PhoneSelect.cs" />
+    <Compile Include="DTO\PhuKien.cs" />
+    <Compile Include="fAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAdmin.Designer.cs">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fEditInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditInformation.Designer.cs">
+      <DependentUpon>fEditInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBillInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBillInfo.Designer.cs">
+      <DependentUpon>fBillInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNhapSoLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhapSoLuong.Designer.cs">
+      <DependentUpon>fNhapSoLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPhuKienTuongThich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPhuKienTuongThich.Designer.cs">
+      <DependentUpon>fPhuKienTuongThich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTableManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTableManager.Designer.cs">
+      <DependentUpon>fTableManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="fThongTinDienThoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongTinDienThoai.Designer.cs">
+      <DependentUpon>fThongTinDienThoai.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fAdmin.resx">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fEditInformation.resx">
+      <DependentUpon>fEditInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBillInfo.resx">
+      <DependentUpon>fBillInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhapSoLuong.resx">
+      <DependentUpon>fNhapSoLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPhuKienTuongThich.resx">
+      <DependentUpon>fPhuKienTuongThich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTableManager.resx">
+      <DependentUpon>fTableManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -57,6 +140,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fThongTinDienThoai.resx">
+      <DependentUpon>fThongTinDienThoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -69,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

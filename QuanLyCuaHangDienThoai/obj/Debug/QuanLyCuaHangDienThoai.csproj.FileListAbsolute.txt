@@ -1,0 +1,17 @@
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.exe.config
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.exe
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.pdb
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.csprojAssemblyReference.cache
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.fLogin.resources
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.Properties.Resources.resources
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.csproj.GenerateResource.cache
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.csproj.CoreCompileInputs.cache
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.exe
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.pdb
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.fTableManager.resources
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.fEditInformation.resources
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.fAdmin.resources
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.fBillInfo.resources
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.fThongTinDienThoai.resources
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.fPhuKienTuongThich.resources
+D:\Visual 2019\C#_Winform\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.fNhapSoLuong.resources
