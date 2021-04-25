@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyCuaHangDienThoai.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace QuanLyCuaHangDienThoai
 {
     public partial class fBillInfo : Form
     {
-        public fBillInfo()
+        void LoadBillInfoList(int MaHD)
+        {
+
+            string query = "EXEC USP_GetBillInfoList @MaHD";
+            dtgvBillInfo.DataSource = DataProvider.Instance.ExecuteQuery(query, new object[] { MaHD });
+        }
+        public string MaHD;
+        public fBillInfo(int MaHD)
         {
             InitializeComponent();
+            LoadBillInfoList(MaHD);
         }
+
     }
 }
