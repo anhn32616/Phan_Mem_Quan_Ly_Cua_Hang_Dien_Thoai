@@ -197,9 +197,10 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(120, 51);
             this.button6.TabIndex = 15;
+	    //neu
             this.button6.Text = "Thêm Vào Giỏ Hàng";
             this.button6.UseVisualStyleBackColor = true;
-            //this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -211,7 +212,7 @@
             this.button5.TabIndex = 20;
             this.button5.Text = "Thoát";
             this.button5.UseVisualStyleBackColor = true;
-            //this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label8
             // 
@@ -290,7 +291,7 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Nhập Thêm";
             this.button2.UseVisualStyleBackColor = true;
-            //this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label11
             // 
