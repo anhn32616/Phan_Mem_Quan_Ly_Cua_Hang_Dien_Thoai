@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHangDienThoai.DAO
 {
-    public class AccountDAO 
+    public class AccountDAO
     {
         private static AccountDAO instance;
         public static AccountDAO Instance

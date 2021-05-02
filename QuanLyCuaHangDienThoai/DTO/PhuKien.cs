@@ -32,7 +32,7 @@ namespace QuanLyCuaHangDienThoai.DTO
         }
         public PhuKien(DataRow row)
         {
-            this.maPhuKien = (int)row["MaPhuKien"] ;
+            this.maPhuKien = (int)row["MaPhuKien"];
             this.tenPhuKien = row["TenPhuKien"].ToString();
             this.giaBanPK = (float)Convert.ToDouble(row["GiaBanPK"].ToString());
             this.ptGiamGia = (float)Convert.ToDouble(row["PtGiamGia"].ToString());

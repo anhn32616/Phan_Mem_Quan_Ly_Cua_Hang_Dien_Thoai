@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillInfoDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\PhoneDAO.cs" />
+    <Compile Include="DAO\PhuKienDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\Phone.cs" />
+    <Compile Include="DTO\PhoneSelect.cs" />
+    <Compile Include="DTO\PhuKien.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,5 +130,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,10 +30,10 @@ namespace QuanLyCuaHangDienThoai.DAO
             }
             return phoneList;
         }
-        public bool NhapThem(int madt,int manhanvien, int soluong)
+        public bool NhapThem(int madt, int manhanvien, int soluong)
         {
             string query = "EXEC USP_NhapThem @MaDT , @MaNhanVien , @SoLuong";
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] {madt, manhanvien, soluong });
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { madt, manhanvien, soluong });
             return result > 0;
         }
         public bool XoaDienThoai(int madt)

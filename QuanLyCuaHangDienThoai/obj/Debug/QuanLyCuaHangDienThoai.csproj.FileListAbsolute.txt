@@ -7,3 +7,12 @@ C:\Users\anhn3\source\repos\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienTh
 C:\Users\anhn3\source\repos\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.csproj.CoreCompileInputs.cache
 C:\Users\anhn3\source\repos\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.exe
 C:\Users\anhn3\source\repos\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.pdb
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_Mem_Quan_Ly_Cua_Hang_Dien_Thoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.csprojAssemblyReference.cache
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_Mem_Quan_Ly_Cua_Hang_Dien_Thoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.Properties.Resources.resources
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_Mem_Quan_Ly_Cua_Hang_Dien_Thoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.csproj.GenerateResource.cache
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_Mem_Quan_Ly_Cua_Hang_Dien_Thoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.csproj.CoreCompileInputs.cache
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_Mem_Quan_Ly_Cua_Hang_Dien_Thoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.exe
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_Mem_Quan_Ly_Cua_Hang_Dien_Thoai\QuanLyCuaHangDienThoai\obj\Debug\QuanLyCuaHangDienThoai.pdb
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_Mem_Quan_Ly_Cua_Hang_Dien_Thoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.exe.config
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_Mem_Quan_Ly_Cua_Hang_Dien_Thoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.exe
+C:\Users\anhn3\OneDrive\Máy tính\New folder\Phan_Mem_Quan_Ly_Cua_Hang_Dien_Thoai\QuanLyCuaHangDienThoai\bin\Debug\QuanLyCuaHangDienThoai.pdb

@@ -20,7 +20,7 @@ namespace QuanLyCuaHangDienThoai.DAO
         public List<PhuKien> LoadPhuKienList(int MaDT)
         {
             List<PhuKien> phuKienList = new List<PhuKien>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("EXEC USP_GetPhuKienList @TenDienThoai", new object[]{ MaDT});
+            DataTable data = DataProvider.Instance.ExecuteQuery("EXEC USP_GetPhuKienList @TenDienThoai", new object[] { MaDT });
 
             foreach (DataRow item in data.Rows)
             {

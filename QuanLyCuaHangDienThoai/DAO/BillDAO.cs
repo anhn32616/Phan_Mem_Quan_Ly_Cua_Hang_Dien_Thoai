@@ -20,7 +20,7 @@ namespace QuanLyCuaHangDienThoai.DAO
         public bool ThemBill(int manhanvien, int makhachhang, float khuyenmai)
         {
             string query = "EXEC USP_ThemBill @MaNhanVien , @MaKhachHang , @KhuyenMai";
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { manhanvien, makhachhang, khuyenmai});
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { manhanvien, makhachhang, khuyenmai });
             return result > 0;
         }
         public int GetMaBillMoi()
